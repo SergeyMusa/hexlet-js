@@ -1,4 +1,3 @@
 # README
 # hexlet-js
-# hexlet-js
-# README
+"Мой первый проект на Хекслете"
