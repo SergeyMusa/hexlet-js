@@ -1,3 +1,73 @@
 1 test
 2
-3
+
+head 
+ <link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="https://code.jquery-1.11.2.js_!!!"></script>
+<script type="text/javascript" src="js.js"></script>
+
+body
+ <div id="table">
+   <form action="" metod="post">
+   <label for="name">Ваше имя:<label>
+    <input type="text" name="name" placeholder="Ваше имя" id="name"><br><br>
+
+   <label for="name">Ваш пароль:<label>
+   <input type="pass" name="name" placeholder="Ваш пароль" id="pass"><br><br>
+   <label for="name">Повторите пароль:<label>
+   <input type="pass2" name="name" placeholder="Ваш пароль2" id="pass2"><br><br>
+
+   <input type="submin" name="submin" id="submin"><br><br>
+
+ </div>
+
+
+
+css
+ #table{
+	width:500px;
+	heigth:500px;
+	margin-left:500px;
+	margin-top:200px;
+}
+
+js
+$(document).ready(function(){
+ $("#submit".click(function(){
+   alert("123");// del it
+    var name=$("#name").val();
+    var pass=$("#pass").val();
+    var pass2=$("#pass2").val();
+	if (name==""){alert("введите имя");}
+	if (pass==""){alert("введите пароль");}
+	if (pass!==pass2){alert("пароли не совпадают");}
+ else {}
+  });
+});
+
+
+
+-----------------
+try{
+ var Login = {
+  name: "Авторизация",
+  sucessfull: "Успешная авторизация",
+  error: "Пароль не правильный или не введен",
+
+  login: function(){
+   let login;
+   login = prompt(this.name);
+
+   if(login == "1234"){
+    alert(this.sucessfull);
+   }else{
+    alert(this.error);
+   }
+  }
+ };
+}catch(err){
+ console.log("Ошибка");
+}finally{
+ Login.login();
+
+}
