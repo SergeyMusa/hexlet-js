@@ -2,5 +2,27 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "lodash.last": "^3.0.0"
-  }
+  },
+  "name": "hexlet",
+  "description": "\"Мои проекты на Хекслете\"",
+  "version": "1.2.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeyMusa/hexlet-js.git"
+  },
+  "keywords": [
+    "hexlet",
+    "lessons",
+    "js"
+  ],
+  "author": "MuSa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergeyMusa/hexlet-js/issues"
+  },
+  "homepage": "https://github.com/SergeyMusa/hexlet-js#readme"
 }
