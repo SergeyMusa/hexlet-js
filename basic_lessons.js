@@ -82,3 +82,22 @@ console.log("- Did Joffrey agree?\n- He did. He also said \"I love using \\n\"."
 console.log("Winter " + 'came ' + 'for ' + 'the ' + 'House ' + 'of ' + 'Frey.');
 
 // 18  ASCII или UTF-8.
+console.log(String.fromCharCode(126));
+console.log(String.fromCharCode(94));
+console.log(String.fromCharCode(37));
+//Ваше решение: console.log(`~\n`+`^\n`+`%`);
+
+// 19 переменная
+// Создайте переменную с именем motto и содержимым What Is Dead May Never Die!. Распечайте содержимое переменной.
+let motto = 'What Is Dead May Never Die!';
+console.log(motto);
+
+// 20 изменение переменной
+let name = 'Brienna';
+ name = 'anneirB';
+
+// 21 Выбор имени переменной
+let x = 2;
+let myBrothersCount = 2;
+
+// 22 
