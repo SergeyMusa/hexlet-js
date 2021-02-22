@@ -127,8 +127,8 @@ let myBrothersCount = 2;
 
 
 //--------------------------------------------------------------------------
-79
-Решение учителя:
+//79
+//Решение учителя:
 // BEGIN
 const encrypt = (str) => {
   let result = '';
@@ -141,9 +141,10 @@ const encrypt = (str) => {
 };
 // END
 
-export default encrypt;
-====================
-Ваше решение:
+// export default encrypt; // error in node
+//====================
+/*
+//Ваше решение:
 // BEGIN
  const encrypt = (string) => {
   let shifr='';
@@ -159,4 +160,7 @@ export default encrypt;
  // END
 
 export default encrypt;
-------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+*/
+
+console.log('The END');
