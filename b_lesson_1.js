@@ -1,1 +1,1 @@
-console.log('Hello, World! from MuSa');
+console.log("Hello, World! from MuSa");
