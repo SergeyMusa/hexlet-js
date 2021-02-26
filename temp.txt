@@ -6,6 +6,48 @@ let visTriger = (nowYear) % 4;
      else {visTriger = false;}
 console.log(nowYear+'-'+visTriger+' visokosnyy');
 ===================================
+// надо переделать на функцию: отправлять дату начала отчета и дату конечную
+
+//const - visokosnyy year
+//const visYear = 2000; 
+let nowYear = 2021; //текущий год //получить системное
+let nowMon = 10; //текущий месяц //получить системное
+let nowDay = 03; //текущий день //получить системное
+
+let dayCount = 0; //счетчик дней до текущего
+let monCount = ''; //счетчик mesyacev до текущего
+
+let year = [0, 31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30]; //матрица дней обычного года
+
+//рычисляем какой сейчас год: обычный или високосный
+let visTriger = (nowYear) % 4; 
+ if (visTriger == 0) {
+     visTriger = true;
+      year = [0, 31, 29, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30];  //матрица дней високосного года
+     }
+     else {visTriger = false; }
+
+//считаем дни до текущего
+for (let i = 0; i < nowMon; i += 1) {
+    
+    dayCount = dayCount + year[i] ;
+   
+   monCount = `${monCount}+${year[i]}`;
+//    console.log(`${year[i]}${nowMon}`);
+//    let result = `${str[i]}${nowMon}`;
+  }
+    let result = (dayCount + nowDay);
+  console.log(nowMon+" месяцы"+':'+monCount);
+  console.log(nowDay+" дни"+':'+result);
+
+
+console.log(nowYear+'-'+visTriger+' visokosnyy');
+
+//const l = year.length
+//console.log(year+'-'+l-1);
+====================================================
+
+
 1 test
 2
 
