@@ -124,9 +124,121 @@ let x = 2;
 let myBrothersCount = 2;
 //--------------------------------------------------------------------------
 
-// 22
+// 22 Ошибки при работе с переменными
+/* eslint prefer-const: 0 */
+
+const family = 'Targaryen';
+// BEGIN
+const pet = 'Dragon';
+// END
+console.log(family);
+console.log('and');
+console.log(pet);
+//--------------------------------------------------------------------------
+
+//23 Выражения в определениях
+/* eslint prefer-const: 0 */
+let eurosCount = 100;
+// BEGIN
+let dollarsPerEuro = 1.25;
+let rublesPerDollar = 60;
+let dollarsCount = eurosCount * dollarsPerEuro;
+console.log(dollarsCount);
+let rublesCount = dollarsCount * rublesPerDollar;
+console.log(rublesCount);
+// END
+//--------------------------------------------------------------------------
+
+//24 Переменные и конкатенация
+/* eslint prefer-const: 0, prefer-template: 0 */
+let info = "We couldn't verify you mother's maiden name.";
+let intro = 'Here is important information about your account security.';
+let firstName = 'Joffrey';
+let greeting = 'Hello';
+// BEGIN
+let hello = greeting+', '+firstName+'!'; // => Hello, Joffrey!
+console.log(hello+'\n'+intro+'\n'+info);
+// END
+//--------------------------------------------------------------------------
+
+//25 Именование переменных
+// BEGIN
+let firstNumber = 11;
+let secondNumber = -100;
+console.log(firstNumber*secondNumber);
+// END
+//--------------------------------------------------------------------------
+
+//26 Магические числа
+let king = 'King Balon the 6th';
+// BEGIN
+let numberOfCastles = 6;
+let roomsPerCastle = 17;
+console.log(king + ' has ' + numberOfCastles * roomsPerCastle + ' rooms.');
+// END
+//--------------------------------------------------------------------------
+
+//27 Константы
+const army = 'the white walkers';
+console.log(army);
+//--------------------------------------------------------------------------
+
+//28 Интерполяция
+const stark = 'Arya';
+// BEGIN
+console.log(`Do you want to eat, ${stark}?`);
+// END
+//--------------------------------------------------------------------------
+
+//29 Извлечение символов из строки
+const name = 'Na\nharis';
+// BEGIN
+console.log(name[7]);
+console.log(name[name.length-1]); // => 's'
+// END
+//--------------------------------------------------------------------------
+
+//30 Типы данных
+JavaScript позволяет узнать тип данных с помощью оператора typeof:
+typeof 3; // 'number'
+typeof 'Game'; // 'string'
+NaN (не число)
+-----------
+console.log(-0.304);
+//--------------------------------------------------------------------------
+
+//31 undefined
+undefined, означает отсутствие значения.
+let x;
+console.log(x);
+//--------------------------------------------------------------------------
+
+//32 Неизменяемость примитивных типов
 
 //--------------------------------------------------------------------------
+
+//33 
+
+//--------------------------------------------------------------------------
+
+//34 
+
+//--------------------------------------------------------------------------
+
+//35 
+
+//--------------------------------------------------------------------------
+
+//36
+
+//--------------------------------------------------------------------------
+
+//3 
+
+//--------------------------------------------------------------------------
+
+
+
 //79
 //Решение учителя:
 // BEGIN
