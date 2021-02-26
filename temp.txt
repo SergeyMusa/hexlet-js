@@ -1,3 +1,11 @@
+let nowYear = 2021; //получить системное
+
+let visTriger = (nowYear) % 4; 
+ if (visTriger == 0) {
+     visTriger = true; }
+     else {visTriger = false;}
+console.log(nowYear+'-'+visTriger+' visokosnyy');
+===================================
 1 test
 2
 
