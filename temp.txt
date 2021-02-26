@@ -1,3 +1,5 @@
+https://fooobar.com/questions/34566/javascript-calculate-the-day-of-the-year-1-366
+=====================================================
 let nowYear = 2021; //получить системное
 
 let visTriger = (nowYear) % 4; 
@@ -6,6 +8,11 @@ let visTriger = (nowYear) % 4;
      else {visTriger = false;}
 console.log(nowYear+'-'+visTriger+' visokosnyy');
 ===================================
+if ((year & 3) == 0 && ((year % 25) != 0 || (year & 15) == 0))
+{
+    /* leap year */
+}
+=========================================
 // надо переделать на функцию: отправлять дату начала отчета и дату конечную
 
 //const - visokosnyy year
@@ -59,7 +66,39 @@ newDate.setDate(date1.getDate() + 7);
 // дата, которая будет меньше newDate на 120 секунд
 newDate.setSeconds(date1.getSeconds()-120);
 ==============================================================
+function dateToDay(date) {
+    var feb = daysInFebruary(date.getFullYear());
+    var aggregateMonths = [0, // January
+                           31, // February
+==================================================
+=================================================
 
+//перенаправление на другую страницу
+$(location).attr('href', 'http://stackoverflow.com')
+Стандартный "ванильный" способ JavaScript для перенаправления страницы
+window.location.href = 'newPage.html';
+Или проще: (поскольку window является глобальным)
+location.href = 'newPage.html';
+// window.location
+window.location.replace('http://www.example.com')
+window.location.assign('http://www.example.com')
+window.location.href = 'http://www.example.com'
+document.location.href = '/path'
+=================================================
+=============================================
+Node.js требует
+Старый стиль импорта модулей, все еще широко используемый в Node.js, это система module.exports/require.
+
+// mymodule.js
+module.exports = {
+   hello: function() {
+      return "Hello";
+   }
+}
+// server.js
+const myModule = require('./mymodule');
+let val = myModule.hello(); // val is "Hello"  
+============================================================
 1 test
 2
 
