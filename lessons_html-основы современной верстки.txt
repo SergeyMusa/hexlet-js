@@ -119,3 +119,21 @@ list-style-type позволяет скрыть маркер списка.
 
 Основы современной вёрстки
 6.Основы CSS
+Подключение CSS
+-<style> внутри HTML-разметки;
+
+-отдельный файл
+site/
+├── css/
+│   ├── main.css
+├── html/
+│   ├── index.html
+<head>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+-Inline-стили
+ атрибута style у любого тега в разметке
+<p style="color: red; font-size: 20px;">Параграф
+
+
