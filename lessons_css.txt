@@ -172,6 +172,49 @@ line-height
 
 ==========
 
+====================================================================
+Колонки
+
+<article class="columns-2">
+  <p>David Bowie,  was not eclectic—he admired Anthony Newley and Jacques Brel and studied mime with Lindsay Kemp).</p>
+</article>
+----
+.columns-2 {
+ 
+ количество 
+  column-count: 2;
+ 
+ отступы между колонками можно с помощью свойства column-gap
+  column-gap: 30px;
+ 
+ оптимальная ширина 
+  column-width: 250px;
+---
+границы  column-rule, которое является краткой записью следующих свойств:
+   column-rule-width — ширина границы.
+   column-rule-style — тип границы. Значения совпадают со значениями свойства border.
+   column-rule-color — цвет границы.
+  column-rule: 2px solid black;
+  column-width: 250px;
+---
+Для разделения колонок  column-span:
+none — значение по-умолчанию. Текст находится просто внутри колонок.
+all — текст «выходит из колонки» и разделяет их.
+h2 {
+  text-align: center;
+  column-span: all;
+---
+Перенос колонок
+ break-before
+ break-after
+ break-inside
+avoid, которое запрещает перенос.
+figure {
+  border: 1px solid;
+  break-inside: avoid;
+---
+
+
 --------------------------------------------------------------------
 --------------------------------------------------------------------
 
