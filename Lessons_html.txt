@@ -81,4 +81,12 @@ body {
   <dt>CSS</dt>
     <dd>Каскадные таблицы стилей</dd>
 </dl>
+-------
+list-style-type позволяет скрыть маркер списка.
+<li class="list-style-none">Нумерованные;
+----
+маркер в виде своего изображения используется свойство list-style-image,
+.list-image {
+  list-style-image: url('./good.png');
+}
 ==============================
