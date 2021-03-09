@@ -159,3 +159,72 @@ p {  color: white;}
 нужно перечислить селекторы подряд, без пробелов (с пробелом, как известно, получится селектор потомка).
 .red_bg.red_text { color: #fff; } /* это правило будет применяться, когда указаны одновременно оба предыдущих класса */
 
+=============================================================================================
+
+8.Формы
+
+<form action="/forms/helper.php">
+  <!-- Данные из формы будут отправлены в PHP файл helper, который расположен в директории forms на сервере -->
+</form>
+---
+поле для ввода текста
+<textarea cols="20" rows="10"></textarea>
+--
+textarea {
+  resize: none;
+}
+----
+ <input type="text">
+ ---
+  <label for="name">Ваше имя</label>
+  <input id="name" type="text">
+  или
+  <form>
+  <label>Ваше имя
+    <input type="text">
+  </label>
+</form>
+----
+
+Для скрытия элемента 
+.sr-only {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+}
+-------
+Списки
+selected. Он отвечает за то, какой элемент выбран по умолчанию.
+<select name="category">
+    <option value="computer">Компьютеры</option>
+    <option value="phone" selected>Телефоны</option>
+    <option value="appliances">Бытовая техника</option>
+ </select>
+----
+
+Отправка формы :
+
+<input> с типом submit.  элемент в виде кнопки с именем, указанным в качестве значения атрибута value.
+<button> Использование парного тега . 
+-----
+
+механизм для разделения участков формы на логические секции — fieldset.  
+В качестве заголовка выступает тег <legend>.
+ <fieldset>
+    <legend>Способ доставки</legend>
+    <label>
+      Курьер
+      <input type="radio" name="delivery" value="courier">
+      <input type="text" name="name" placeholder="Введите ваше имя">
+    </label>
+  <button>Заказать</button>
+  
+  
+
+
