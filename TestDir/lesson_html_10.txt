@@ -1,4 +1,4 @@
-// вариант 1, рабочий, но неприняли
+// вариант 1, рабочий, 
 //==============================================================
 const smallestDivisor = (number) => {
  if (number === 1) {
@@ -19,3 +19,26 @@ const smallestDivisor = (number) => {
 };
 
 smallestDivisor(15);
+
+//=================================================================
+// решение учителя
+//================
+const smallestDivisor = (num) => {
+  if (num < 1) {
+    return NaN;
+  }
+  if (num === 1) {
+    return num;
+  }
+
+  let divisor = 2;
+
+  while (num % divisor !== 0) {
+    divisor = divisor + 1;
+  }
+
+  return divisor;
+};
+// END
+
+export default smallestDivisor;
