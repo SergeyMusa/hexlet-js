@@ -4,7 +4,7 @@ const smallestDivisor = (number) => {
  if (number === 1) {
     return 1; }
  if (number < 1) {
-    return `NaN`; }
+    return NaN; } // НаН надо без кавычек
 
   let counter = 2;
   while (counter <= number/2) {
