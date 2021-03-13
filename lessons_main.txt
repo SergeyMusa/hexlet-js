@@ -1,3 +1,13 @@
+result *= counter;    // то же, что result = result * counter
+result += counter;    // то же, что result = result + counter
+result -= counter;    // то же, что result = result - counter
+result %= counter;    // то же, что result = result % counter
+b = a++;    // b = 3, a = 4
+b = ++a;    // b = 4, a = 4
+ ---------------------цикл-----------------------------------
+ for (let counter = 1; counter <= n; counter++) {
+    result *= counter;
+  }
 1.
 2.
 3.
