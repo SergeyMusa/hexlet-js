@@ -8,6 +8,21 @@ b = ++a;    // b = 4, a = 4
  for (let counter = 1; counter <= n; counter++) {
     result *= counter;
   }
+  -----------------------------------------------------------
+  switch(num) {
+  case 1:  // if (num === 1)
+    answer = "One";
+    break;
+
+  case 2:  // if (num === 2)
+    answer = "Two";
+    break;
+
+  default:
+    answer = "Nothing";
+    break;
+}
+----------------------------------------------------------------
 1.
 2.
 3.
