@@ -181,6 +181,14 @@ export default surfaceArea;
 import surfaceArea from './math.js';
 const surfaceOfMars = surfaceArea(3390);
 ---
+export const e = 2.718;
+--
+export const square = (x) => {
+  return x * x;
+};
+--
+import { surfaceArea, square } from './math.js';
+---
 Если импорт from содержит ./, значит находится в текущей файловой системе. 
 Если from 'name' только имя, без ./ в начале, значит  подгружается из стандартной библиотеки nodejs, либо из установленных пакетов
 ---------------------------------------------------------------------------
