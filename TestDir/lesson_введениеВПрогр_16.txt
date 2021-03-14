@@ -1,0 +1,22 @@
+// BEGIN (write your solution here)
+const square = (num) => {
+return num * num; // return Math.pow(num,2) ;
+}
+
+const sumOfSquares = (numA, numB) => {
+return (square(numA) + square(numB));
+}
+
+const squareSumOfSquares = (numC, numD) => {
+return (square(sumOfSquares(numC, numD)));
+}
+
+// END
+=========================================================
+
+const square = (num) => num * num;
+
+const sumOfSquares = (num1, num2) => square(num1) + square(num2);
+
+const squareSumOfSquares = (num1, num2) => square(sumOfSquares(num1, num2));
+// END
