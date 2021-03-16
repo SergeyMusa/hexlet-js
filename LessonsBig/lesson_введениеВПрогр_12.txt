@@ -1,0 +1,19 @@
+const isPrime = (num) => {
+if (num <= 1) {
+ return false;
+}
+
+  for (let i=2;i < num;i++) {
+//вариант учителя //  for (let i = 2; i <= number / 2; i += 1) { 
+// можно сделать проверку до i/2, но тогда начать с 5, а 4 сразу-false
+      if (num % i === 0) {
+//        console.log(num%i +'-'+ 1);
+      return false; 
+      }      
+  }    
+//      console.log(num%i+' - '+i);
+     return true; 
+};
+// END
+
+export default isPrime;

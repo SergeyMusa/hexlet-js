@@ -1,0 +1,97 @@
+// правильный код
+
+//import { length } from 'strings.js';
+
+const summaAB = (num) => { //функция сложения
+    let rez=0; // инициализируем результат
+    const str = String(num);
+    //console.log(str);
+    
+    for (let i=0; i<str.length; i++) {
+//  for (let i = 0; i < length(str); i += 1) {    
+        rez += Number(str[i]);
+    }
+  console.log(rez);
+  return rez;
+}
+
+const addDigits = (num) => { // Функция вычисления суммы всех чисел длинного числа
+    let rez = num;
+    while (rez >= 10) {
+        rez = summaAB(rez); 
+    }
+    console.log(rez);
+    return rez;
+}
+//  export default addDigits; // раскоментировать в Хекслете
+
+
+
+================================================================================
+// первый блин
+
+//import { length } from 'strings.js';
+
+const summaAB = (numA, numB) => { //функция сложения
+  console.log('    => ф.сумма =>' + parseInt(numA) + ' + ' + parseInt(numB) + ' = ', parseInt(numA) + parseInt(numB));
+  return parseInt(numA) + parseInt(numB);
+}
+
+const addDigits = (num) => { // Функция вычисления суммы всех чисел длинного числа
+  let rez = 0; // инициализируем результат
+  // 1 console.log('=> 1 операция');  
+  const numStr = (num).toString(); //  преобразуем  num в строку
+  let lenStr = numStr.length; // переменная кол-ва циклов
+  console.log('имеем число=' + numStr + '-' + num + '--преобразовали его в:' + typeof (numStr) + '--длинной=' + lenStr); // смотрим что мы получили и с чем будем работать
+
+  //2   console.log('  => 2 операция');  
+  while (true) {   // общий цикл 
+
+    //9-10 // выход   
+    if (lenStr < 2) { // если цикл закончен -> входим для пересчета на выход
+
+      if (rez > 9) { //  если число не однозначное, входим для повторного запуска цикла 
+        const numStrEnd = (rez).toString(); // преобразуем число в строку, чтобы задать длину цикла
+        lenStr = numStrEnd.length;  // задаем длину следующего цикла
+
+        console.log('-+-результат ' + rez + ' длинный, запускаем следующий цикл-+-' + 'длинной lenStr=' + lenStr + '\n');
+        addDigits(rez); // запуск следующий раз цикла 
+        console.log('         ' + 'Exit-9-  num=' + num + '  rez=' + rez); // вывод после завершения чтобы понять что здесь косяк
+        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        return rez;
+      }  // если число было однозначное - все ВЫХОД //      console.log('           '+'=>  ----------10----------');
+
+      console.log('           ' + 'Exit-10-  num=' + num + '  rez=' + rez); // смотрим, что посчитано все ОК
+      const itog = rez; // НЕ РАБОТАЕТ
+      //return parseInt(num); // вывод итогово результата !!!! - неправильный = return прошлый
+    } // конец цикла Выход и выход в конец общего цикла
+
+    //3 цикл от 1 до 1=длины строки
+    console.log('-запускаем цикл-' + ' длиной ' + lenStr);
+    for (let i = 1; i <= (lenStr); i++) {
+      //4 
+      console.log('  ' + i + '....');
+      rez = summaAB(rez, numStr[i - 1]);  // вызов функции сумма rez+(i-1). тк начало с 0
+    }    // конец первого цикла = общая сумма первого числа(строки)
+
+    //5 
+    num = rez; // после цикла меняем num, для следующего цикла
+
+    //6 
+    lenStr = 1; // цикл пересчета закончен, сбрасываем длину цикла
+     // возврат в начало общ.цикла
+  } // конец общего цикла
+
+  //  export default addDigits; // раскоментировать в Хекслете
+} //конец функции
+
+addDigits(999999999999);
+
+//addDigits(0);//).toBe(0);
+//addDigits(5);//).toBe(5);
+//addDigits(10);//).toBe(1);
+//addDigits(19);//).toBe(1);
+//--addDigits(38);//).toBe(2);
+//addDigits(1259);//).toBe(8);
+//addDigits(598997686567);//).toBe(4);
+//addDigits(999999999999);//).toBe(9)
