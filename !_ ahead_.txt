@@ -1,4 +1,7 @@
 js reduce
 
+JavaScript F.A.Q: Часть 1
+https://habr.com/ru/post/120192/
+
 
 React Native
