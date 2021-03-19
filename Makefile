@@ -1,21 +1,22 @@
-#install: install-deps
+#!
+$DATE=date +%D
 
-#run:
-#	bin/nodejs-package.js 10
+install: install-deps
 
-install-deps:
-	npm ci
+push:
+	@echo "Git_$DATE"
+	git pull
+	git add . 
+	git commit -m "edit_$DATE"
+	#
+	git push
 
-test:
-	npm test
+pull:
+	git pull
 
-#test-coverage:
-#	npm test -- --coverage --coverageProvider=v8
+#test:
+#	npm test
 
-#lint:
-#	npx eslint .
 
-publish:
-	npm publish
 
 .PHONY: test

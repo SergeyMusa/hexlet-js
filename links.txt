@@ -1,7 +1,0 @@
-https://fokit.ru/sozdanie-formy-avtorizatsii-dlya-sajta-html-css-javascript/
-
-помогает с версткой
-https://www.figma.com/downloads/
-
-Git
-https://git-scm.com/book/ru/v2
