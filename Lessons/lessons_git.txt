@@ -31,4 +31,48 @@ hexlet-git$ git grep Hexlet 5120bea3   =Поиск в конкретном ко�
 git grep hexlet $(git rev-list --all)    # rev-list возвращает список хешей коммитов
 
 it clean -fd    =Выполняем очистку # -f – force, -d – directory
+git restore    =Для отмены изменений
+
+Файлы, добавленные для фиксации
+git restore --staged INFO.md   =для перевода изменений в рабочую директорию:
+
+================
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    index.html
+        new file:   index.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hexlet.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        dir/
+--------------
+status
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        dir/
+        index.md
+================
+cd code-user/ # Переходим в директорию code-user
+git restore hexlet.txt
+git restore --staged index.md index.html
+git restore index.html
+git clean -fd
+
+--dry-run,
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Для отладки публикации не нужно добавлять пакет в основной каталог NPM. На протяжении всего проекта используйте аргумент --dry-run, чтобы не засорять общее хранилище учебными пакетами. Таким способом вы убедитесь, что правильно настроили свой пакет.
+
+Для установки пакета из операционной системы, используйте команду npm link. Её необходимо запускать из корневой директории проекта.
+
 

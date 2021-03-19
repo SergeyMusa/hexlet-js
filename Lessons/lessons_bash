@@ -56,5 +56,22 @@ $ cd lala &> output
 --------------------------------------------------------------------
 
 Пайплайн (Конвейер)
+$ grep alias .bashrc | grep color
+# enable color support of handy aliases
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+$ cat .bashrc | grep alias | grep color
+
+cat source | grep Dog | uniq | sort
+-Читается файл source
+-Входные данные грепаются по подстроке "Dog"
+-Убираются дубли (в исходном файле две одинаковых строки "Dog")
+-Входные данные сортируются и выводятся на экран
+
+echo "Hello, $(HELLO)!"
+$ make say HELLO=Kitty
+echo "Hello, Kitty!"
+Hello, Kitty!
 
 
