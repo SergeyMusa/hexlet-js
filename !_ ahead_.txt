@@ -1,10 +1,11 @@
-js reduce
+1/js reduce
 
-JavaScript F.A.Q: Часть 1
+2.JavaScript F.A.Q: Часть 1
 https://habr.com/ru/post/120192/
 
+3.bootstrap vs tailwind css
 
-React Native
+4.React Native
 
 
 ---------------------------------
