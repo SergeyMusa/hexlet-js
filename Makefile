@@ -1,6 +1,6 @@
 #! Makefile
-d1='date +%D'
-d2='date +"%y.%m.%d"'
+d1=`date +%D`
+d2=`date +"%y.%m.%d"`
 
 install: install-deps
 
@@ -16,7 +16,8 @@ pull:
 	@echo "Pull_from_Git_OK"
 
 test:
-	@echo $d
+	@echo $d1
+	echo $d2
 	@echo "Git_$d1" + ' = ' + $d2 '=='  'date +%D'
 #	npm test
 
