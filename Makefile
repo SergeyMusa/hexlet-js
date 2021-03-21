@@ -1,6 +1,6 @@
 #! Makefile
 d1='date +%D'
-d2='%y.%m.%d'
+d2='date +"%y.%m.%d"'
 
 install: install-deps
 
