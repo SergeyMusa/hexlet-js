@@ -9,12 +9,12 @@ push:
 	git pull
 	git add .
 	git commit -m "edit_$d1"
-	#
 	git push
 	echo "Push_OK_$d1"
-	
+
 pull:
 	git pull
+	@echo "Pull_from_Git_OK"
 
 test:
 	@echo $d
