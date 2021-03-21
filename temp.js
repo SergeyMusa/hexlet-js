@@ -1,18 +1,22 @@
-export const getWeekends = (toWhich) => {
-    let weekLong = ['saturday', 'sunday'];
-    let weekShort = ['sat', 'sun'];
-  
-    let answer=weekLong;
-    if (toWhich = 'short') ? answer=weekShort : answer=weekLong ;
-    //  result += shouldBeBig ? toUpperCase(str[i]) : str[i];
-
-    console.log(answer);
-    return answer;  
-    //} console.log('');
+export const swap = (getArray) => {
+  let temp = '';
+  const arrLen=getArray.length-1;
+  if (arrLen <2) { 
+//    console.log(getArray);
+    return getArray;
+  }
+      temp = getArray[0];
+//      console.log(temp);
+      getArray[0] = getArray[arrLen];
+      getArray[arrLen] = temp;
+//    console.log(getArray);
+    return getArray;
 }
-  getWeekends('');
+swap(['1', 2]);
 
-/*  expect(getWeekends()).toEqual(['saturday', 'sunday']);
-  expect(getWeekends('long')).toEqual(['saturday', 'sunday']);
-  expect(getWeekends('short')).toEqual(['sat', 'sun']);
+/*
+swap([]); // []
+swap([1]); // [1]
+swap([1, 2]); // [2, 1]
+swap(['one', 'two', 'three']); // ['three', 'two', 'one']
 */
