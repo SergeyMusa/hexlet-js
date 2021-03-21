@@ -1,0 +1,17 @@
+#install: install-deps
+$DATE =  date +%D
+
+push:
+	git pull
+	@echo "$DATE_pushGit"
+	git add .
+	git commit -m "edit_$DATE"
+	git push
+
+pull:
+	git pull
+
+#test:
+#	npm test
+
+.PHONY: test
