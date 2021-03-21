@@ -1,5 +1,5 @@
 #! Makefile
-DATE=$'date +%D'
+DATE='date +%D'
 
 install: install-deps
 
