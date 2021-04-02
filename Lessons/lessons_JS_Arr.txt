@@ -1,0 +1,58 @@
+// export default (coll, prefix) => {
+export const arrays = (userNames, getPrefix) => {
+  const newNames = [];
+
+//import addPrefix from './arrays.js';
+  for (let i = 0; i < userNames.length; i += 1) {
+    newNames[i] = (`${getPrefix} ${userNames[i]}`);
+//    console.log(newNames[i]);
+  }
+//   console.log('all: '+newNames);
+ return newNames;
+}
+//export default arrays;
+
+arrays(['john', 'smith', 'karl'], 'Mr'); 
+// => ['Mr john', 'Mr smith', 'Mr karl'];
+
+//-------------------------------------------------------//
+/*
+export const arrays = (getArray, getIndex, getDefault=null) => {
+  let returnValue = '';
+  const arrLen=getArray.length;
+  if (getIndex > -1 && getIndex < arrLen) {
+    returnValue = getArray[getIndex];
+   console.log(returnValue);
+    return returnValue;
+  }
+   console.log(getDefault);
+    return getDefault;
+}
+*/
+//arrays(['moscow', 'london', 'berlin', 'porto', '1'], 5); 
+
+//get(cities, 1); // 'london'
+//get(cities, 4); // null
+//get(cities, 10, 'paris'); // 'paris'
+//get(cities, -1, 'oops'); // 'oops'
+
+
+//const cities = ['moscow', 'london', 'berlin', 'porto'];
+
+
+/*
+get(cities, 1); // 'london'
+get(cities, 4); // null
+get(cities, 10, 'paris'); // 'paris'
+get(cities, -1, 'oops'); // 'oops'
+Подсказки
+Для параметров функции можно указывать значения по умолчанию прям при объявлении: 
+(param = 'default value')
+
+arrays(['1', 2]);
+
+swap([]); // []
+swap([1]); // [1]
+swap([1, 2]); // [2, 1]
+swap(['one', 'two', 'three']); // ['three', 'two', 'one']
+*/
