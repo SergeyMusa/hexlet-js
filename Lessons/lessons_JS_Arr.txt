@@ -1,3 +1,4 @@
+// export default (coll, prefix) => {
 export const arrays = (userNames, getPrefix) => {
   const newNames = [];
 
