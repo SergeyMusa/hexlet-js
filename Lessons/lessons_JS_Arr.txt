@@ -1,3 +1,45 @@
+
+
+
+//-------------------------------------------------------//
+
+Решение sergeymusa
+// @ts-check
+/* eslint-disable no-param-reassign, import/prefer-default-export */
+
+// BEGIN (write your solution here)
+export const reverse = (names) => {
+  for (let i = 0; i < (names.length - 1) / 2; i += 1) {
+    const nameA = names[i];
+    const nameB = names[names.length - 1 - i];
+    names[i] = nameB;
+    names[names.length - 1 - i] = nameA;
+  }
+  return names;
+};
+export default reverse;
+// END
+//======================================================================
+Решение учителя
+// @ts-check
+/* eslint-disable no-param-reassign, import/prefer-default-export */
+
+// BEGIN
+export const reverse = (coll) => {
+  const lastIndex = coll.length - 1;
+  const middleIndex = lastIndex / 2;
+
+  for (let i = 0; i < middleIndex; i += 1) {
+    const mirrorIndex = lastIndex - i;
+    const temp = coll[i];
+    coll[i] = coll[mirrorIndex];
+    coll[mirrorIndex] = temp;
+  }
+};
+// END
+
+//-------------------------------------------------------//
+
 // export default (coll, prefix) => {
 export const arrays = (userNames, getPrefix) => {
   const newNames = [];
