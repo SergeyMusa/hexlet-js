@@ -1,0 +1,9 @@
+format
+-------
+distance = calculate_distance_between_towns(source + '-' + destination)
+
+rasstoyaniye='{}-{}'.format(source, destination)
+distance = calculate_distance_between_towns(rasstoyaniye)
+
+===============================================================
+
